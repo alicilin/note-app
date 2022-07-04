@@ -1,0 +1,40 @@
+{
+  "name": "NoteApp",
+  "version": "1.0.0",
+  "private": true,
+  "main": "background.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "electron:build": "vue-cli-service electron:build -w",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "author": "Ali Fırat",
+  "dependencies": {
+    "@electron/remote": "^2.0.1",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "fs-extra": "^10.1.0",
+    "knex": "^2.1.0",
+    "lodash": "^4.17.21",
+    "moment-timezone": "^0.5.34",
+    "sqlite3": "^5.0.8",
+    "vee-validate": "^3.4.14",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "electron": "^16.0.5",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-electron-builder": "~2.1.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

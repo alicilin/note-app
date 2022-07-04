@@ -1,0 +1,49 @@
+$primary: #1976d2;
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+// loading
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
+    z-index: 99999999;
+  }
+
+.fixed-table-70 {
+    height: 81vh;
+}
+
+.vertical-middle-table > table > tbody > tr > td {
+    vertical-align: middle !important;
+}
+
+.code {
+    height: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.code-viewer {
+    height: 77vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+hr.dashed {
+    border-top: 3px dashed #bbb;
+}
+
+.containerx {
+    padding: 2px;
+    width: 99vw;
+    height: 100%;
+}
