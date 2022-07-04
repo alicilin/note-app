@@ -24,9 +24,9 @@ protocol.registerSchemesAsPrivileged(
 );
 
 async function setup() {
-    let D_OK = await fs.pathExists(path.join(os.homedir(), 'Not'));
+    let D_OK = await fs.pathExists(path.join(os.homedir(), 'Note'));
     if (D_OK === false) {
-        await fs.ensureDir(path.join(os.homedir(), 'Not'));
+        await fs.ensureDir(path.join(os.homedir(), 'Note'));
     }
 
     let cparams = {

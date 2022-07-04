@@ -4,9 +4,9 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('notes', table => {
-        table.increments('id').primary();
-        table.string('title').notNullable();
-        table.string('notebook').notNullable().index();
+        table.increments('id').primary().index();
+        table.string('title', 100).notNullable();
+        table.string('notebook', 100).notNullable().index();
         table.text('contents').notNullable();
         table.timestamps(true, true, true);
 
