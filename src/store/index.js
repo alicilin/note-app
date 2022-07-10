@@ -64,7 +64,8 @@ let actions = {
             let offset = (Math.abs(state.page - 1) * 100);
             let builder = knex('notes').limit(100).offset(offset).orderBy('id', 'desc');
             if (state.search) {
-                builder.whereIn('id', knex('notes_fts').whereRaw('notes_fts match ?', [state.search]).select('rowid'));
+                let search = `"${_.join(_.words(_.replace(state.search, /"/ig, ' ')), '" "')}"`;
+                builder.whereIn('id', knex('notes_fts').whereRaw('notes_fts match ?', [search]).select('rowid'));
             }
 
             if (state.notebook) {
@@ -83,7 +84,8 @@ let actions = {
         try {
             let builder = knex('notes').count('id as total');
             if (state.search) {
-                builder.whereIn('id', knex('notes_fts').whereRaw('notes_fts match ?', [state.search]).select('rowid'));
+                let search = `"${_.join(_.words(_.replace(state.search, /"/ig, ' ')), '" "')}"`;
+                builder.whereIn('id', knex('notes_fts').whereRaw('notes_fts match ?', [search]).select('rowid'));
             }
 
             if (state.notebook) {

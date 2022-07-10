@@ -1,6 +1,6 @@
 {
   "name": "NoteApp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "main": "background.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "@electron/remote": "^2.0.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "electron-context-menu": "^3.3.0",
     "fs-extra": "^10.1.0",
     "knex": "^2.1.0",
     "lodash": "^4.17.21",
